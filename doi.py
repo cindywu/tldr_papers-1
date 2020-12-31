@@ -1,3 +1,10 @@
+'''
+author @yash
+some utility functions for adding DOI functionality to tl;dr papers
+'''
+
+
+# uses crossref API to (attempt to) parse an abstract given a DOI
 def getAbstractfromDOI(doi):
 	# attempt to get DOI
 	from crossref.restful import Works
@@ -16,4 +23,6 @@ def getAbstractfromDOI(doi):
 	else:
 		return 1
 
-getAbstractfromDOI("loll")
+# checks validity of DOI input
+def checkDOI(doi):
+	
